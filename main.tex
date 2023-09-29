@@ -1,0 +1,73 @@
+% Tipo de documento
+\documentclass[letterpaper,12pt]{article}
+
+% Paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[shortlabels]{enumitem}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage[rflt]{floatflt}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr} % Paquete para el header y el formato de la portada
+\usepackage{float}
+\usepackage{longtable,multirow,booktabs}
+\usepackage{cite}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{sidecap}
+\usepackage{adjustbox}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{animate}
+%\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Variables del documento
+\newcommand{\myMateria}{CUADERNO DE INFORMES}
+\newcommand{\mySemestre}{2023-20}
+\newcommand{\MyReport}{CREAR UN MAPA DE NAVEGACIÓN}
+\newcommand{\myUnidad}{II}
+\newcommand{\myDate}{26 de septiembre de 2023}
+\newcommand{\myName}{Alex Diego Rosas Quispe}
+\newcommand{\myTeacher}{Ruben Valdemar Huanca Apaza}
+
+% Formato de la pagina
+\textheight = 26cm
+\textwidth = 18cm
+\topmargin = -2.5cm
+\oddsidemargin = -0.8cm
+\pagestyle{fancy}
+
+\fancyhf{}
+\lhead{\myMateria}
+%\chead{\includegraphics[height=1cm]{img/senati.png}}
+\rhead{Unidad \myUnidad}
+
+\setlength{\columnsep}{4mm}
+\setlength{\parindent}{0.5in} % Sangria
+\setlength{\parskip}{1em} % Distancia entre parrafos
+\renewcommand{\baselinestretch}{1.0} % Interlineado
+\setlength{\headheight}{33pt}
+\fancyfoot{\thepage}
+
+% Cuerpo del documento
+\begin{document}
+
+\input{portada/portada.tex}
+\newpage
+\author{\normalsize{\texttt{\myName}}}
+\thispagestyle{fancy}
+
+% Inclución de capitulos o secciones
+\include{secciones/datos}
+\include{secciones/instrucciones}
+\include{secciones/rotaciones}
+\include{secciones/pea}
+
+\end{document}
